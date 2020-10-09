@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$header-height: 50px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#application-name{
+  color: #FFFFFF;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.main {
+  min-height: calc(100vh - #{$header-height});
+}
+
+.header-color{
+  background-color: #FF00FF;
+}
+
+.header-test{
+  padding-top: 40px;
+}
+
+
+.home-top{
+  padding-top: 10px;
+}
+
+.footer-logo {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #FF00FF;
+}
+
+#footer-area{
+  color: #FFFFFF;
+}
+
+.font{
+  color: #FFFF22;
+  font-weight: bold;
+}
+
+.size{
+  font-size: 50px;
+}
+
+.glyphicon{
+  color: #FFFFFF;
+}
+
+.a{
+  padding-top: 20px;
+}
+
+.btn-block{
+  border :1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 1px 1px rgba(0,0,0,0.075);
+}
+

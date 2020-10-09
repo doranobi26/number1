@@ -1,0 +1,38 @@
+<div class="container">
+  <h1 class="detail-title">ここがイチオシ！！</h1>
+    <div class="row center-block">
+      <span class="label label-primary">投稿者:<%= @user.name %></span>
+      <span class="label label-primary">投稿日時:<%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></span><br>
+      <span class="label label-primary">推しメン:<%= @post.member %></span>
+      <span class="label label-primary">カテゴリー:<%= @post.category.group %></span>
+      <div class="post-show-buttons">
+      <!-- ログイン時 -->
+        <% if user_signed_in? %>
+          <% if @user == current_user %>
+            <span class="edit-button">
+              <%= link_to "編集", edit_post_path(@post.id), class:"btn btn-success btn-sm" %>
+            </span>
+            <span class="destroy-button">
+              <%= link_to "削除", post_path(@post.id),"data-confirm"=>"本当に削除しますか?", class:"btn btn-danger btn-sm", method: :delete %>
+            </span>
+          <% end %>
+        <% end %>
+        <!-- ここまで -->
+      </div>
+    </div>
+    <div class="row center-block">
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+          <%= @post.title %>
+        </div>
+        <div class="panel-body">
+          <%= @post.caption %>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center">
+      <% @pictures.each do |picture| %>
+        <%= attachment_image_tag picture, :image, format: 'jpeg', size:'310x310' %>
+      <% end %>
+    </div>
+</div>
