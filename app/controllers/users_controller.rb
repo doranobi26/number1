@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def personal
-    @user = user.find(params[:id])
+    @user = User.find(params[:id])
   end
 
   private

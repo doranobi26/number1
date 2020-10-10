@@ -1,7 +1,6 @@
 <%= form_with model:@post, html:{name: 'form'} do |f| %>
   <p class="form">
     <%= f.label :推しメン選択 %>
-    <%#= f.text_field :title,class:"btn-block form-controll" %>
     <%= f.collection_select :post, Post.all, :id, :member,class:"select-controll" %>
   </p>
   <p class="form">

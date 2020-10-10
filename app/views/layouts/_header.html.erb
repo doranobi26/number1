@@ -17,7 +17,7 @@
         <!--ログイン時 -->
         <% if user_signed_in? %>
           <li class="menu">
-            <%= link_to ' Mypage',user_profile_path(current_user),class:"glyphicon glyphicon-home" %>
+            <%= link_to ' Personal',user_personal_path(current_user),class:"glyphicon glyphicon-home" %>
           </li>
           <li class="menu">
             <%= link_to ' User',users_path, class:"glyphicon glyphicon-user" %>
